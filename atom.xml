@@ -5,9 +5,9 @@
   <subtitle>拥抱这片绿洲 那热烈的温柔</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://yangguohong.com/"/>
   <updated>2019-01-24T15:53:02.943Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://yangguohong.com/</id>
   
   <author>
     <name>Kobe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>你好,Hexo</title>
-    <link href="http://yoursite.com/2019/01/24/%E4%BD%A0%E5%A5%BD-Hexo/"/>
-    <id>http://yoursite.com/2019/01/24/你好-Hexo/</id>
+    <link href="http://yangguohong.com/2019/01/24/%E4%BD%A0%E5%A5%BD-Hexo/"/>
+    <id>http://yangguohong.com/2019/01/24/你好-Hexo/</id>
     <published>2019-01-24T15:53:02.000Z</published>
     <updated>2019-01-24T15:53:02.943Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/01/24/hello-world/"/>
-    <id>http://yoursite.com/2019/01/24/hello-world/</id>
+    <link href="http://yangguohong.com/2019/01/24/hello-world/"/>
+    <id>http://yangguohong.com/2019/01/24/hello-world/</id>
     <published>2019-01-24T15:25:03.753Z</published>
     <updated>2019-01-24T15:25:03.753Z</updated>
     
