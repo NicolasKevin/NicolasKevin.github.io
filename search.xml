@@ -11,7 +11,7 @@
   <entry>
     <title></title>
     <url>%2F2019%2F04%2F16%2F%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[#第一次编写博客 #开篇 点这里可以看到本文的“源代码”。用markd写东西，特别是写博客好处有很多，比如一旦熟悉常用的语法后，可以很方便的控制格式，而且如果你有几个不同的博客，甚至是到不同的平台上发布，使用markdown作为源文件，都是一个不错的选择。在网上看了一些相关的博客，要么写的太多太乱，要么又不明就里，所以既然是讲怎么写博客的，那就以这篇博客为例，看看应该如何用markdown来写的这篇博客。这里你会看到如下常用表达。（这里的列表是用无序列表，如果需要用有序列表，直接用1.xx 2.xx 。。。就是了。） 目录 缩进 高亮 链接 表格 代码 公式 插图 脚注 #工具现在工具大致可以分为两类，如下表所示。我个人觉得这就是个轻量级的工具，适合做做简单的表格。当然只要你愿意，你的想法都是可以被实现的。更多可以参考表格制作。 1​ -- coding: utf-8 --“””Spyder Editor This is a temporary script file.“””import cv2img = cv2.imread(‘E:\Opencv Picture\Lena.jpg’, 1)cv2.imshow(‘img’, img)cv2.waitKey() ​]]></content>
+    <content type="text"><![CDATA[title: ‘第一次编写博客’date: 2019-04-16 22:22:02tags: -Markdown #第一次编写博客 #开篇 点这里可以看到本文的“源代码”。用markd写东西，特别是写博客好处有很多，比如一旦熟悉常用的语法后，可以很方便的控制格式，而且如果你有几个不同的博客，甚至是到不同的平台上发布，使用markdown作为源文件，都是一个不错的选择。在网上看了一些相关的博客，要么写的太多太乱，要么又不明就里，所以既然是讲怎么写博客的，那就以这篇博客为例，看看应该如何用markdown来写的这篇博客。这里你会看到如下常用表达。（这里的列表是用无序列表，如果需要用有序列表，直接用1.xx 2.xx 。。。就是了。） 目录 缩进 高亮 链接 表格 代码 公式 插图 脚注 #工具现在工具大致可以分为两类，如下表所示。我个人觉得这就是个轻量级的工具，适合做做简单的表格。当然只要你愿意，你的想法都是可以被实现的。更多可以参考表格制作。 1​ -- coding: utf-8 --“””Spyder Editor This is a temporary script file.“””import cv2img = cv2.imread(‘E:\Opencv Picture\Lena.jpg’, 1)cv2.imshow(‘img’, img)cv2.waitKey() ​]]></content>
   </entry>
   <entry>
     <title><![CDATA[你好,Hexo]]></title>
