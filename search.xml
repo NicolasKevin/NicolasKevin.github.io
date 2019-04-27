@@ -8,6 +8,12 @@
   <entry>
     <title><![CDATA[第一篇博客]]></title>
     <url>%2F2019%2F04%2F27%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[这是一级标题这是二级标题这是三级标题 列表1 列表2 a aaaaa b bbbbb 列表3 导航]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>-学习 -成长</tag>
+      </tags>
   </entry>
 </search>
