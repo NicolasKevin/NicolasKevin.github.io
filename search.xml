@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo + github搭建（基础）]]></title>
+    <url>%2F2019%2F04%2F28%2Fhexo-github%E6%90%AD%E5%BB%BA%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[温馨提示：电脑系统为window 10专业版，64位 ###具体步骤 1、安装Node.js和配置好Node.js环境 node.js下载地址 2、安装Git和配置好Git环境（成功的标志为在电脑上任何位置鼠标右键能够出现Git GUI Here和Git Bash Here两个选择）注意：如需要在cmd中调用Git命令，则需配置电脑环境变量Path(输入 git –version 验证) Git地址 3、Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README 在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会发现该项目已经被部署到网络上，能够通过外网来访问它。 4、安装Hexo，在自己认为合适的地方创个文件夹，我是在E盘建了一个blog文件夹。然后通过命令行进入到该文件夹里面 输入npm install hexo -g，开始安装Hexo 输入hexo -v，检查hexo是否安装成功 输入hexo init，初始化该文件夹（需要等待一会）]]></content>
+      <tags>
+        <tag>学习</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F04%2F27%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[第一篇博客]]></title>
-    <url>%2F2019%2F04%2F27%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[这是一级标题这是二级标题这是三级标题 横线 列表1 列表2 a aaaaa b bbbbb 列表3 导航 字变斜了 字变粗了 &lt;html&gt;&lt;/html&gt; 123456&lt;html&gt; &lt;head&gt; &lt;title&gt;这个是标题哦&lt;/title&gt; &lt;/head&gt; &lt;body&gt;&lt;/body&gt;&lt;/html&gt; 这个是引用哦]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>成长</tag>
-      </tags>
   </entry>
 </search>
