@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangguohong.com/"/>
-  <updated>2019-09-10T15:29:35.027Z</updated>
+  <updated>2019-09-10T15:35:23.354Z</updated>
   <id>http://yangguohong.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>数据仓库之ODS层数据同步-Datax脚本自动生成</title>
     <link href="http://yangguohong.com/2019/09/10/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E4%B9%8BODS%E5%B1%82%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5-Datax%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90/"/>
     <id>http://yangguohong.com/2019/09/10/数据仓库之ODS层数据同步-Datax脚本自动生成/</id>
-    <published>2019-09-10T15:29:34.463Z</published>
-    <updated>2019-09-10T15:29:35.027Z</updated>
+    <published>2019-09-10T15:34:13.000Z</published>
+    <updated>2019-09-10T15:35:23.354Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,12 @@
     
     </summary>
     
+      <category term="Datax" scheme="http://yangguohong.com/categories/Datax/"/>
+    
+    
+      <category term="学习" scheme="http://yangguohong.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Datax" scheme="http://yangguohong.com/tags/Datax/"/>
     
   </entry>
   

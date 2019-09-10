@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习,Datax,">
 
 
 
@@ -89,15 +89,16 @@
 
 
 <meta name="description" content="数据仓库之ODS层数据同步-Datax脚本自动生成1.背景​        最近在搞公司级数据仓库，第一件事就是梳理ODS层表结构。梳理完成后（去掉一些脱敏的字段）就要建ODS层的hive表结构（不同的业务库都有相当多的mysql表—几百张），如果一个个去建表将会是一个很大的工程，当然也会出错，所以我这边就想着如何可以通过mysql的表结构直接生成hive表结构，这样既省时省力，又快速准确。当然还">
+<meta name="keywords" content="学习,Datax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="科比·布莱恩特">
+<meta property="og:title" content="数据仓库之ODS层数据同步-Datax脚本自动生成">
 <meta property="og:url" content="http://yangguohong.com/2019/09/10/数据仓库之ODS层数据同步-Datax脚本自动生成/index.html">
 <meta property="og:site_name" content="科比·布莱恩特">
 <meta property="og:description" content="数据仓库之ODS层数据同步-Datax脚本自动生成1.背景​        最近在搞公司级数据仓库，第一件事就是梳理ODS层表结构。梳理完成后（去掉一些脱敏的字段）就要建ODS层的hive表结构（不同的业务库都有相当多的mysql表—几百张），如果一个个去建表将会是一个很大的工程，当然也会出错，所以我这边就想着如何可以通过mysql的表结构直接生成hive表结构，这样既省时省力，又快速准确。当然还">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T15:29:35.027Z">
+<meta property="og:updated_time" content="2019-09-10T15:35:23.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="科比·布莱恩特">
+<meta name="twitter:title" content="数据仓库之ODS层数据同步-Datax脚本自动生成">
 <meta name="twitter:description" content="数据仓库之ODS层数据同步-Datax脚本自动生成1.背景​        最近在搞公司级数据仓库，第一件事就是梳理ODS层表结构。梳理完成后（去掉一些脱敏的字段）就要建ODS层的hive表结构（不同的业务库都有相当多的mysql表—几百张），如果一个个去建表将会是一个很大的工程，当然也会出错，所以我这边就想着如何可以通过mysql的表结构直接生成hive表结构，这样既省时省力，又快速准确。当然还">
 
 
@@ -134,7 +135,7 @@
 
 
 
-  <title> | 科比·布莱恩特</title>
+  <title>数据仓库之ODS层数据同步-Datax脚本自动生成 | 科比·布莱恩特</title>
   
 
 
@@ -321,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">数据仓库之ODS层数据同步-Datax脚本自动生成</h1>
         
 
         <div class="post-meta">
@@ -333,7 +334,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-10T23:29:34+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-10T23:34:13+08:00">
                 2019-09-10
               </time>
             
@@ -343,6 +344,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Datax/" itemprop="url" rel="index">
+                    <span itemprop="name">Datax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -430,10 +453,10 @@
 </ul>
 <p>公共配置：</p>
 <p>vim syn_base.sh</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">source /etc/profile</span><br><span class="line">DATAX_HOME="/home/xxxx/datax"</span><br><span class="line">SHELL_PATH="/home/xxxx/dw_datax"</span><br><span class="line">SCRIPT_PATH=$&#123;SHELL_PATH&#125;/job</span><br><span class="line">DATAX_LOG=$&#123;SHELL_PATH&#125;/logs/datax.log.`date "+%Y-%m-%d"`</span><br><span class="line">HDFS_PATH="hdfs://spark01:8020"</span><br><span class="line">START_TIME=$(date -d "-1 day" +%Y-%m-%d)</span><br><span class="line">END_TIME=$(date "+%Y-%m-%d")</span><br><span class="line">DT_TIME=$(date -d "-1 day" +%Y%m%d)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>参数</span><br><span class="line">ISCOMPRESS="false"</span><br><span class="line">WRITEMODE="nonConflict"</span><br><span class="line">FIELDDELIMITER="|"</span><br><span class="line">FILETYPE="text"</span><br><span class="line">PATH_HIVE="/user/hive/warehouse/"</span><br><span class="line"><span class="meta">#</span>START_TIME="2019-08-22"</span><br><span class="line"><span class="meta">#</span>END_TIME="2019-08-23"</span><br><span class="line"><span class="meta">#</span>1:target_db_name </span><br><span class="line"><span class="meta">#</span>2:target_table_name</span><br><span class="line"></span><br><span class="line">AppendPartition()</span><br><span class="line">&#123;</span><br><span class="line">	ssh  -p xxx spark01 "hive -e 'ALTER TABLE $1.$2 ADD IF NOT EXISTS PARTITION (day='$DT_TIME')'";</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">TruncateHiveTable()</span><br><span class="line">&#123;</span><br><span class="line">         ssh  -p xxx spark01 "hive -e 'truncate table '$1'.'$2'";</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>1:target_db_name </span><br><span class="line"><span class="meta">#</span>2:target_table_name</span><br><span class="line"><span class="meta">#</span>3:MySQLUrl</span><br><span class="line"><span class="meta">#</span>4:MYSQL_USERNAME</span><br><span class="line"><span class="meta">#</span>5:MYSQL_PASSWORD</span><br><span class="line"><span class="meta">#</span>6:sourceTableName</span><br><span class="line"><span class="meta">#</span>7:jsonFilePath</span><br><span class="line">BaseDataxMysql2Hive()</span><br><span class="line">&#123;</span><br><span class="line">         python $&#123;DATAX_HOME&#125;/bin/datax.py -p"-DtargetDBName=$1 -DtargetTableName=$2  -DjdbcUrl=$3 -Dusername=$4 -Dpassword=$5 -DsourceTableName=$6 -DhdfsPath=$HDFS_PATH -DstartTime=$&#123;START_TIME&#125; -DendTime=$&#123;END_TIME&#125; -DisCompress=$ISCOMPRESS -DwriteMode=$WRITEMODE -DfileType=$FILETYPE -DfieldDelimiter='$FIELDDELIMITER' -DfileName=$2  -Dpath=$&#123;PATH_HIVE&#125;$1.db/$2/day=$DT_TIME" $&#123;SCRIPT_PATH&#125;$7.json;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">source /etc/profile</span><br><span class="line">DATAX_HOME="/home/xxxx/datax"</span><br><span class="line">SHELL_PATH="/home/xxxx/dw_datax"</span><br><span class="line">SCRIPT_PATH=$&#123;SHELL_PATH&#125;/job</span><br><span class="line">DATAX_LOG=$&#123;SHELL_PATH&#125;/logs/datax.log.`date "+%Y-%m-%d"`</span><br><span class="line">HDFS_PATH="hdfs://spark01:8020"</span><br><span class="line">START_TIME=$(date -d "-1 day" +%Y-%m-%d)</span><br><span class="line">END_TIME=$(date "+%Y-%m-%d")</span><br><span class="line">DT_TIME=$(date -d "-1 day" +%Y%m%d)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">参数</span></span><br><span class="line">ISCOMPRESS="false"</span><br><span class="line">WRITEMODE="nonConflict"</span><br><span class="line">FIELDDELIMITER="|"</span><br><span class="line">FILETYPE="text"</span><br><span class="line">PATH_HIVE="/user/hive/warehouse/"</span><br><span class="line"><span class="meta">#</span><span class="bash">START_TIME=<span class="string">"2019-08-22"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">END_TIME=<span class="string">"2019-08-23"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">1:target_db_name </span></span><br><span class="line"><span class="meta">#</span><span class="bash">2:target_table_name</span></span><br><span class="line"></span><br><span class="line">AppendPartition()</span><br><span class="line">&#123;</span><br><span class="line">	ssh  -p xxx spark01 "hive -e 'ALTER TABLE $1.$2 ADD IF NOT EXISTS PARTITION (day='$DT_TIME')'";</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">TruncateHiveTable()</span><br><span class="line">&#123;</span><br><span class="line">         ssh  -p xxx spark01 "hive -e 'truncate table '$1'.'$2'";</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">1:target_db_name </span></span><br><span class="line"><span class="meta">#</span><span class="bash">2:target_table_name</span></span><br><span class="line"><span class="meta">#</span><span class="bash">3:MySQLUrl</span></span><br><span class="line"><span class="meta">#</span><span class="bash">4:MYSQL_USERNAME</span></span><br><span class="line"><span class="meta">#</span><span class="bash">5:MYSQL_PASSWORD</span></span><br><span class="line"><span class="meta">#</span><span class="bash">6:sourceTableName</span></span><br><span class="line"><span class="meta">#</span><span class="bash">7:jsonFilePath</span></span><br><span class="line">BaseDataxMysql2Hive()</span><br><span class="line">&#123;</span><br><span class="line">         python $&#123;DATAX_HOME&#125;/bin/datax.py -p"-DtargetDBName=$1 -DtargetTableName=$2  -DjdbcUrl=$3 -Dusername=$4 -Dpassword=$5 -DsourceTableName=$6 -DhdfsPath=$HDFS_PATH -DstartTime=$&#123;START_TIME&#125; -DendTime=$&#123;END_TIME&#125; -DisCompress=$ISCOMPRESS -DwriteMode=$WRITEMODE -DfileType=$FILETYPE -DfieldDelimiter='$FIELDDELIMITER' -DfileName=$2  -Dpath=$&#123;PATH_HIVE&#125;$1.db/$2/day=$DT_TIME" $&#123;SCRIPT_PATH&#125;$7.json;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>业务配置：</p>
 <p>vim xxx.sh</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">source /etc/profile</span><br><span class="line">source /home/xxxx/dw_datax/shell/syn_base.sh</span><br><span class="line">MYSQL_URL="jdbc:mysql:xxxx3306/xxxx"</span><br><span class="line">MYSQL_PASSWORD="xxxx"</span><br><span class="line">MYSQL_USERNAME="xxxx"</span><br><span class="line">TARGET_DB_NAME="xxxx"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>1.目标库名 2.目标表名 3.数据源表名 4.文件路径名</span><br><span class="line">DataxMysql2HiveAppend()</span><br><span class="line">&#123;</span><br><span class="line">	BaseDataxMysql2Hive $1 $2 $MYSQL_URL $MYSQL_USERNAME $MYSQL_PASSWORD $3 $4;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span>1.目标库名 2.目标表名 3.数据源表名 4.文件路径名</span><br><span class="line">DataXMysql2HiveOverride()</span><br><span class="line">&#123;</span><br><span class="line">    AppendPartition $1 $2</span><br><span class="line">    #TruncateHiveTable $1 $2</span><br><span class="line">    DataxMysql2HiveAppend  $1 $2 $3 $4;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>增量同步</span><br><span class="line">DataXMysql2HiveOverride $TARGET_DB_NAME "xxxx_incr" "xxxx" "/ods/xxx/xxx_incr" &gt;&gt; /home/xxx/dw_datax/logs/ods/xxx/xxx_incr.log.`date "+%Y-%m-%d"`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>全量同步</span><br><span class="line">DataXMysql2HiveOverride $TARGET_DB_NAME "/ods/xxx/xxx" "xxx" "/ods/xxx/xxx" &gt;&gt; /home/xxx/dw_datax/logs/ods/xxx/xxx.log.`date "+%Y-%m-%d"`</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">source /etc/profile</span><br><span class="line">source /home/xxxx/dw_datax/shell/syn_base.sh</span><br><span class="line">MYSQL_URL="jdbc:mysql:xxxx3306/xxxx"</span><br><span class="line">MYSQL_PASSWORD="xxxx"</span><br><span class="line">MYSQL_USERNAME="xxxx"</span><br><span class="line">TARGET_DB_NAME="xxxx"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">1.目标库名 2.目标表名 3.数据源表名 4.文件路径名</span></span><br><span class="line">DataxMysql2HiveAppend()</span><br><span class="line">&#123;</span><br><span class="line">	BaseDataxMysql2Hive $1 $2 $MYSQL_URL $MYSQL_USERNAME $MYSQL_PASSWORD $3 $4;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">1.目标库名 2.目标表名 3.数据源表名 4.文件路径名</span></span><br><span class="line">DataXMysql2HiveOverride()</span><br><span class="line">&#123;</span><br><span class="line">    AppendPartition $1 $2</span><br><span class="line">    #TruncateHiveTable $1 $2</span><br><span class="line">    DataxMysql2HiveAppend  $1 $2 $3 $4;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">增量同步</span></span><br><span class="line">DataXMysql2HiveOverride $TARGET_DB_NAME "xxxx_incr" "xxxx" "/ods/xxx/xxx_incr" &gt;&gt; /home/xxx/dw_datax/logs/ods/xxx/xxx_incr.log.`date "+%Y-%m-%d"`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">全量同步</span></span><br><span class="line">DataXMysql2HiveOverride $TARGET_DB_NAME "/ods/xxx/xxx" "xxx" "/ods/xxx/xxx" &gt;&gt; /home/xxx/dw_datax/logs/ods/xxx/xxx.log.`date "+%Y-%m-%d"`</span><br></pre></td></tr></table></figure>
 <h2 id="6-脚本调度"><a href="#6-脚本调度" class="headerlink" title="6.脚本调度"></a>6.脚本调度</h2><p>​        公司采用的是azkaban调度，自己编写job在执行job中写入自己的执行命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh /home/xxx/dw_datax/shell/xxx.sh</span><br></pre></td></tr></table></figure>
 <p>​        最后定时调度即可。</p>
@@ -492,6 +515,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"><i class="fa fa-google"></i> 学习</a>
+          
+            <a href="/tags/Datax/" rel="tag"><i class="fa fa-google"></i> Datax</a>
+          
+        </div>
       
 
       
@@ -626,7 +657,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -637,7 +668,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
